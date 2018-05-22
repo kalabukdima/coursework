@@ -10,27 +10,34 @@
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{array}
 
-\usepackage[a4paper, nofoot,
+\usepackage[a4paper, footskip=10mm,
             left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+
+\addto\captionsrussian{\renewcommand\chaptername{ГЛАВА}}
+\addto\captionsrussian{\renewcommand\contentsname{ОГЛАВЛЕНИЕ}}
 
 
 \begin{document}
 \input{title}
 
 \newpage
-\chapter*{Введение}
+\tableofcontents
+
+\newpage
+\addcontentsline{toc}{chapter}{ВВЕДЕНИЕ}
+\chapter*{ВВЕДЕНИЕ}
 \input{intro}
 
 \newpage
-\chapter{Алгоритмы классификации}
+\chapter{АЛГОРИТМЫ КЛАССИФИКАЦИИ}
 \input{classifiers}
 
 \newpage
-\chapter{Алгоритмы сегментации}
+\chapter{АЛГОРИТМЫ СЕГМЕНТАЦИИ}
 \input{segmentation}
 
 \newpage
-\chapter{Подготовка данных}
+\chapter{ПОДГОТОВКА ДАННЫХ}
 \input{data}
 
 \end{document}
