@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{scrartcl}
+\documentclass[14pt,a4paper]{extreport}
 
 \usepackage{cmap}
 \usepackage[T2A]{fontenc}
@@ -8,9 +8,29 @@
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb, amsfonts}
+\usepackage{array}
+
+\usepackage[a4paper, nofoot,
+            left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
 
 
 \begin{document}
-\input{title.tex}
+\input{title}
+
+\newpage
+\chapter*{Введение}
+\input{intro}
+
+\newpage
+\chapter{Алгоритмы классификации}
+\input{classifiers}
+
+\newpage
+\chapter{Алгоритмы сегментации}
+\input{segmentation}
+
+\newpage
+\chapter{Подготовка данных}
+\input{data}
 
 \end{document}
