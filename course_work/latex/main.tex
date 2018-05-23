@@ -13,10 +13,42 @@
 
 \usepackage[a4paper, footskip=10mm,
             left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+
 \graphicspath{ {./images/} }
 
 \addto\captionsrussian{\renewcommand\chaptername{ГЛАВА}}
 \addto\captionsrussian{\renewcommand\contentsname{ОГЛАВЛЕНИЕ}}
+
+
+\makeatletter
+
+% Оформление нумерованных глав
+\renewcommand{\@makechapterhead}[1] {
+  \vspace*{36pt} % Пустое место вверху страницы
+  {
+    \centering
+    \parindent=18pt
+    \Large\bfseries
+    \chaptername ~ \thechapter{} \par % Номер главы
+    #1 \par % Заголовок текста с новой строки
+    \nopagebreak % Не отрываем заголовок от текста
+    \vspace{36pt} % Пустое место между заголовком и текстом
+  }
+}
+
+% Оформление ненумерованных глав
+\renewcommand{\@makeschapterhead}[1] {
+  \vspace*{36pt} % Пустое место вверху страницы
+  {
+    \centering
+    \parindent=18pt
+    \Large\bfseries #1 \par
+    \nopagebreak % чтобы не оторвать заголовок от текста
+    \vspace{25pt} % между заголовком и текстом
+  }
+}
+
+\makeatother
 
 
 \begin{document}
