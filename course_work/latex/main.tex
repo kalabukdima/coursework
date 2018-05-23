@@ -10,11 +10,13 @@
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{array}
 \usepackage{multirow}
+\usepackage{csquotes}
+\usepackage{biblatex}
+
+\addbibresource{list.bib}
 
 \usepackage[a4paper, footskip=10mm,
             left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
-
-\graphicspath{ {./images/} }
 
 \addto\captionsrussian{\renewcommand\chaptername{ГЛАВА}}
 \addto\captionsrussian{\renewcommand\contentsname{ОГЛАВЛЕНИЕ}}
@@ -73,5 +75,16 @@
 \newpage
 \chapter{ПОДГОТОВКА ДАННЫХ}
 \input{data}
+
+\newpage
+\addcontentsline{toc}{chapter}{ЗАКЛЮЧЕНИЕ}
+\chapter*{ЗАКЛЮЧЕНИЕ}
+\input{conclusion}
+
+\newpage
+\nocite{cs231n}
+\nocite{fcns_segm}
+\nocite{adversarial}
+\printbibliography
 
 \end{document}
