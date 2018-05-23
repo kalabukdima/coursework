@@ -44,6 +44,18 @@
 <img src="results/germany0_mask.png" alt="Drawing" style="width: 400px;"/>
 
 ---
+## Результаты сегментации зданий
+<img src="results/z20_03_g.png" alt="Drawing" style="width: 800px;"/> 
+
+---
+## Результаты сегментации зданий
+<img src="results/z20_03_m.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## Результаты сегментации зданий
+<img src="results/20_03_gg.png" alt="Drawing" style="width: 800px;"/>
+
+---
 #### Исходный код:
 https://github.com/kalabukdima/earth-surface-segmentation
 # Спасибо за внимание!
